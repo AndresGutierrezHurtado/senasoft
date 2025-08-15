@@ -94,7 +94,7 @@
                     "items": { "type": "string" },
                     "description": "Factores externos que podrían dificultar el aprendizaje"
                 },
-                
+
                 "progreso_global": {
                     "type": "number",
                     "minimum": 0,
@@ -134,7 +134,23 @@
                     "objetivo": { "type": "string" },
                     "ejercicios_sugeridos": {
                         "type": "array",
-                        "items": { "type": "string" }
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "nombre": { "type": "string" },
+                                "contexto": { "type": "string" },
+                                "regla": { "type": "string" },
+                                "solución": { "type": "string" },
+                                "etiqueta": { "type": "array" }
+                            },
+                            "required": [
+                                "nombre",
+                                "contexto",
+                                "regla",
+                                "solución",
+                                "etiqueta"
+                            ]
+                        }
                     }
                 },
                 "required": [
