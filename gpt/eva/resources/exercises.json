@@ -56,5 +56,43 @@
             "exercise_year": 2013,
             "tags": ["JAVA", "WEB", "DATABASE", "BACKEND", "AUTHENTICATION"]
         }
+    ],
+    "softskills_pitch": [
+        {
+            "exercise_name": "Presentación Personal Efectiva",
+            "exercise_context": "El aprendiz necesita mejorar su capacidad de presentarse profesionalmente en reuniones o entrevistas.",
+            "exercise_rule": "Preparar un pitch de 2 minutos destacando experiencia, habilidades y logros sin leer texto directamente.",
+            "exercise_solution": "Grabar un video de la presentación, recibir feedback de un mentor sobre claridad, lenguaje corporal y confianza.",
+            "exercise_time": 180,
+            "exercise_year": 2025,
+            "tags": ["SOFTSKILLS", "PITCH", "COMUNICACION"]
+        },
+        {
+            "exercise_name": "Storytelling de Proyecto",
+            "exercise_context": "El aprendiz debe ser capaz de explicar proyectos complejos de manera comprensible para público no técnico.",
+            "exercise_rule": "Elegir un proyecto realizado, explicar objetivos, retos y resultados en menos de 5 minutos usando solo recursos visuales simples.",
+            "exercise_solution": "Presentar ante un pequeño grupo, recibir retroalimentación sobre claridad, estructura y engagement.",
+            "exercise_time": 180,
+            "exercise_year": 2025,
+            "tags": ["SOFTSKILLS", "PITCH", "COMUNICACION", "TEAMWORK"]
+        },
+        {
+            "exercise_name": "Roleplay de Entrevista",
+            "exercise_context": "Practicar situaciones de entrevista para mejorar respuestas y lenguaje corporal.",
+            "exercise_rule": "Simular entrevista con un mentor actuando como reclutador, preparar respuestas para preguntas técnicas y de comportamiento.",
+            "exercise_solution": "Recibir retroalimentación sobre claridad, confianza y coherencia, y repetir el ejercicio hasta mejorar la puntuación de feedback.",
+            "exercise_time": 180,
+            "exercise_year": 2025,
+            "tags": ["SOFTSKILLS", "PITCH", "COMUNICACION", "INTERVIEW"]
+        },
+        {
+            "exercise_name": "Feedback Constructivo en Equipo",
+            "exercise_context": "El aprendiz debe aprender a dar y recibir retroalimentación efectiva en entornos de equipo.",
+            "exercise_rule": "Participar en dinámicas grupales donde cada miembro da feedback sobre desempeño de tareas asignadas.",
+            "exercise_solution": "Registrar las observaciones recibidas y aplicarlas en la siguiente iteración de trabajo en equipo.",
+            "exercise_time": 180,
+            "exercise_year": 2025,
+            "tags": ["SOFTSKILLS", "TEAMWORK", "COMUNICACION", "LEADERSHIP"]
+        }
     ]
 }
