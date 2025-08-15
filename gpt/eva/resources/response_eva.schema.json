@@ -20,20 +20,36 @@
                         "tecnico": {
                             "type": "object",
                             "properties": {
-                                "frontend": { "type": "integer", "minimum": 0, "maximum": 100 },
-                                "backend": { "type": "integer", "minimum": 0, "maximum": 100 },
+                                "frontend": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                },
+                                "backend": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                },
                                 "bases_de_datos": {
                                     "type": "integer",
                                     "minimum": 0,
                                     "maximum": 100
                                 },
-                                "testing": { "type": "integer", "minimum": 0, "maximum": 100 }
+                                "testing": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                }
                             }
                         },
                         "habilidades_blandas": {
                             "type": "object",
                             "properties": {
-                                "comunicacion": { "type": "integer", "minimum": 0, "maximum": 100 },
+                                "comunicacion": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                },
                                 "trabajo_en_equipo": {
                                     "type": "integer",
                                     "minimum": 0,
@@ -53,10 +69,77 @@
                         }
                     }
                 }
-            },
-            "required": ["nombre", "nivel"]
+            }
         },
         "analisis_aprendizaje": {
+            "type": "object",
+            "properties": {
+                "fortalezas": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Tecnologías, habilidades y comportamientos en los que destaca"
+                },
+                "debilidades": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Áreas técnicas o de soft skills que requieren mejora"
+                },
+                "oportunidades": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Temas o tecnologías con potencial de crecimiento para el aprendiz"
+                },
+                "amenazas": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Factores externos que podrían dificultar el aprendizaje"
+                },
+                "metricas_tecnicas": {
+                    "type": "object",
+                    "properties": {
+                        "tiempo_promedio_resolucion_problemas": {
+                            "type": "string",
+                            "description": "Tiempo promedio en completar retos de programación"
+                        },
+                        "precision_codigo": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100,
+                            "description": "Porcentaje de código funcional sin errores críticos"
+                        },
+                        "velocidad_adaptacion_tecnologias": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100,
+                            "description": "Capacidad para aprender nuevas herramientas y frameworks"
+                        }
+                    }
+                },
+                "progreso_global": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "Progreso estimado en la ruta de aprendizaje"
+                },
+                "ultima_actualizacion": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Fecha del último análisis"
+                },
+                "resumen": {
+                    "type": "string",
+                    "description": "Resumen general del estado de aprendizaje"
+                }
+            },
+            "required": [
+                "fortalezas",
+                "debilidades",
+                "oportunidades",
+                "amenazas",
+                "progreso_global",
+                "ultima_actualizacion",
+                "resumen"
+            ]
         },
         "roadmap": {
             "type": "array",
@@ -74,9 +157,20 @@
                         "items": { "type": "string" }
                     }
                 },
-                "required": ["tema", "categoria", "objetivo", "ejercicios_sugeridos"]
+                "required": [
+                    "tema",
+                    "categoria",
+                    "objetivo",
+                    "ejercicios_sugeridos"
+                ]
             }
         }
     },
-    "required": ["aprendiz", "metodo_aprendizaje", "roadmap", "perfil_magnus_base64"]
+    "required": [
+        "aprendiz",
+        "metodo_aprendizaje",
+        "analisis_aprendizaje",
+        "roadmap",
+        "perfil_magnus_base64"
+    ]
 }
