@@ -94,27 +94,7 @@
                     "items": { "type": "string" },
                     "description": "Factores externos que podrían dificultar el aprendizaje"
                 },
-                "metricas_tecnicas": {
-                    "type": "object",
-                    "properties": {
-                        "tiempo_promedio_resolucion_problemas": {
-                            "type": "string",
-                            "description": "Tiempo promedio en completar retos de programación"
-                        },
-                        "precision_codigo": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 100,
-                            "description": "Porcentaje de código funcional sin errores críticos"
-                        },
-                        "velocidad_adaptacion_tecnologias": {
-                            "type": "number",
-                            "minimum": 0,
-                            "maximum": 100,
-                            "description": "Capacidad para aprender nuevas herramientas y frameworks"
-                        }
-                    }
-                },
+                
                 "progreso_global": {
                     "type": "number",
                     "minimum": 0,
