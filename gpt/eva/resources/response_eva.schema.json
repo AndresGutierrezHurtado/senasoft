@@ -1,0 +1,82 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Esquema de aprendizaje completo de EVA",
+    "type": "object",
+    "properties": {
+        "aprendiz": {
+            "type": "object",
+            "properties": {
+                "nombre": { "type": "string" },
+                "edad": { "type": "integer" },
+                "tiempo_de_aprendizaje": { "type": "string" },
+                "perfil_magnus": {
+                    "type": "string",
+                    "schema": "MAGNUS|base64",
+                    "description": "Perfil del aprendiz generado por Magnus, codificado en Base64"
+                },
+                "nivel": {
+                    "type": "object",
+                    "properties": {
+                        "tecnico": {
+                            "type": "object",
+                            "properties": {
+                                "frontend": { "type": "integer", "minimum": 0, "maximum": 100 },
+                                "backend": { "type": "integer", "minimum": 0, "maximum": 100 },
+                                "bases_de_datos": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                },
+                                "testing": { "type": "integer", "minimum": 0, "maximum": 100 }
+                            }
+                        },
+                        "habilidades_blandas": {
+                            "type": "object",
+                            "properties": {
+                                "comunicacion": { "type": "integer", "minimum": 0, "maximum": 100 },
+                                "trabajo_en_equipo": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                },
+                                "resolucion_problemas": {
+                                    "type": "integer",
+                                    "minimum": 0,
+                                    "maximum": 100
+                                }
+                            }
+                        },
+                        "pitch": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 100
+                        }
+                    }
+                }
+            },
+            "required": ["nombre", "nivel"]
+        },
+        "analisis_aprendizaje": {
+        },
+        "roadmap": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "tema": { "type": "string" },
+                    "categoria": {
+                        "type": "string",
+                        "enum": ["tecnico", "habilidad_blanda", "pitch"]
+                    },
+                    "objetivo": { "type": "string" },
+                    "ejercicios_sugeridos": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                    }
+                },
+                "required": ["tema", "categoria", "objetivo", "ejercicios_sugeridos"]
+            }
+        }
+    },
+    "required": ["aprendiz", "metodo_aprendizaje", "roadmap", "perfil_magnus_base64"]
+}
